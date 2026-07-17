@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Anton", sans-serif;
+  --font-cond: "Barlow Condensed", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --color-ink: #04060d;
+  --color-panel: #0a101f;
+  --color-panel-2: #0e1630;
+  --color-royal: #2447e0;
+  --color-royal-bright: #3f6bff;
+  --color-royal-deep: #12245e;
+  --color-chrome: #c9d4e8;
+  --color-steel: #8b99b5;
+  --color-heat: #ff3b30;
+  --color-gold: #f5b93c;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-ink text-chrome font-body antialiased;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #2447e0;
+  color: #fff;
+}
+
+/* chrome / metallic headline treatment */
+.text-chrome-grad {
+  background: linear-gradient(180deg, #ffffff 0%, #d7e0f2 38%, #8fa1c4 52%, #e8eefb 60%, #ffffff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-royal-grad {
+  background: linear-gradient(180deg, #6f8dff 0%, #2447e0 55%, #16308f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.display {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+}
+
+.cond {
+  font-family: var(--font-cond);
+  text-transform: uppercase;
+}
+
+/* angled banner clip, like a pennant plate */
+.clip-banner {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 14px), 50% 100%, 0 calc(100% - 14px));
+}
+
+.clip-slant {
+  clip-path: polygon(8px 0, 100% 0, calc(100% - 8px) 100%, 0 100%);
+}
+
+/* marquee ticker */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
+
+/* slow pulse for screen wall */
+@keyframes screenGlow {
+  0%, 100% { opacity: 0.35; }
+  50% { opacity: 1; }
+}
+
+/* film grain + vignette over hero */
+.hero-vignette {
+  background:
+    radial-gradient(ellipse at 50% 35%, transparent 0%, rgba(4, 6, 13, 0.55) 68%, rgba(4, 6, 13, 0.96) 100%);
+}
+
+/* subtle court-line grid backdrop */
+.court-grid {
+  background-image:
+    linear-gradient(rgba(63, 107, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(63, 107, 255, 0.06) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+/* scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: #04060d; }
+::-webkit-scrollbar-thumb { background: #16308f; border-radius: 6px; }
+::-webkit-scrollbar-thumb:hover { background: #2447e0; }
