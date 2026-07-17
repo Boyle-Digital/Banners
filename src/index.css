@@ -81,6 +81,15 @@ body {
   50% { opacity: 1; }
 }
 
+/* breathing backlight for the Kentucky wood silhouette */
+@keyframes backlightPulse {
+  0%, 100% { opacity: 0.55; }
+  50% { opacity: 0.95; }
+}
+.animate-backlight {
+  animation: backlightPulse 5.5s ease-in-out infinite;
+}
+
 /* breathing amber backlight behind the barrel-wood sign */
 @keyframes emberPulse {
   0%, 100% { opacity: 0.12; }
@@ -94,7 +103,7 @@ body {
 /* film grain + vignette over hero */
 .hero-vignette {
   background:
-    radial-gradient(ellipse at 50% 35%, transparent 0%, rgba(4, 6, 13, 0.55) 68%, rgba(4, 6, 13, 0.96) 100%);
+    radial-gradient(ellipse at 50% 35%, transparent 0%, rgba(4, 6, 13, 0.35) 68%, rgba(4, 6, 13, 0.82) 100%);
 }
 
 /* subtle court-line grid backdrop */
