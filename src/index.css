@@ -81,6 +81,16 @@ body {
   50% { opacity: 1; }
 }
 
+/* breathing amber backlight behind the barrel-wood sign */
+@keyframes emberPulse {
+  0%, 100% { opacity: 0.12; }
+  50% { opacity: 0.32; }
+}
+.animate-ember-pulse {
+  background: radial-gradient(ellipse 62% 48% at 50% 42%, rgba(255, 138, 46, 0.55) 0%, rgba(255, 138, 46, 0.12) 55%, transparent 75%);
+  animation: emberPulse 5.5s ease-in-out infinite;
+}
+
 /* film grain + vignette over hero */
 .hero-vignette {
   background:
