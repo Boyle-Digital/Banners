@@ -1,4 +1,3 @@
-import { useRef, type PointerEvent } from 'react'
 import { motion } from 'framer-motion'
 import Embers from './Embers'
 import { ORDER_URL } from '../data/menu'
@@ -15,36 +14,14 @@ const KY_CLIP =
   'polygon(0% 98.1%, 5.8% 81.9%, 8.4% 72.5%, 14.3% 78.5%, 15.1% 75.1%, 19.9% 61.9%, 25.9% 47.2%, 36.5% 43.8%, 40.4% 41.5%, 48.3% 42.6%, 54.9% 15.8%, 62.8% 1.9%, 66.7% 2.3%, 70.7% 13.2%, 77.2% 18.9%, 86.5% 15.8%, 91.7% 27.5%, 91.7% 37%, 95.7% 55.5%, 100% 60.8%, 95% 70.9%, 90.1% 76.6%, 77.5% 96.2%, 56.2% 95.5%, 40.4% 94.3%, 22.6% 94.7%, 20% 100%, 14.2% 100%, 2% 100%)'
 
 export default function Hero() {
-  const ref = useRef<HTMLElement>(null)
-
-  const onMove = (e: PointerEvent<HTMLElement>) => {
-    const el = ref.current
-    if (!el) return
-    const r = el.getBoundingClientRect()
-    el.style.setProperty('--px', String((e.clientX - r.left) / r.width - 0.5))
-    el.style.setProperty('--py', String((e.clientY - r.top) / r.height - 0.5))
-  }
-
   return (
-    <section
-      id="top"
-      ref={ref}
-      onPointerMove={onMove}
-      className="relative flex min-h-screen flex-col overflow-hidden bg-black"
-    >
+    <section id="top" className="relative flex min-h-screen flex-col overflow-hidden bg-black">
       {/* Kentucky in barrel wood — the bar's signature wall piece, minus the lettering */}
-      <div
-        className="absolute inset-0 flex items-center justify-center transition-transform duration-300 ease-out"
-        style={{
-          transform:
-            'translate3d(calc(var(--px, 0) * -18px), calc(var(--py, 0) * -12px), 0)',
-        }}
-        aria-hidden
-      >
+      <div className="absolute inset-0 flex items-center justify-center" aria-hidden>
         <motion.div
-          initial={{ opacity: 0, scale: 1.08 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.8, ease: 'easeOut' }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1.6, ease: 'easeOut' }}
           className="relative aspect-[2.26/1] w-[min(100vw,1600px)]"
         >
           {/* breathing amber backlight behind the state */}
@@ -110,7 +87,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="display text-chrome-grad text-[16vw] leading-[0.95] drop-shadow-[0_12px_44px_rgba(0,0,0,0.85)] sm:text-8xl lg:text-[9rem]"
+          className="display text-chrome-grad text-[16vw] leading-[0.95] sm:text-8xl lg:text-[9rem]"
         >
           Banners
         </motion.h1>
@@ -119,7 +96,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.22 }}
-          className="display mt-3 text-2xl text-white drop-shadow-[0_4px_18px_rgba(0,0,0,0.9)] sm:text-4xl"
+          className="display mt-3 text-2xl text-white sm:text-4xl"
         >
           Every game. <span className="text-royal-grad">Every night.</span> Every reason.
         </motion.h2>
@@ -128,7 +105,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.34 }}
-          className="mt-6 max-w-2xl text-base leading-relaxed text-chrome drop-shadow-[0_2px_10px_rgba(0,0,0,0.95)] sm:text-lg"
+          className="mt-6 max-w-2xl text-base leading-relaxed text-chrome sm:text-lg"
         >
           Lexington's family-friendly sports bar — every game streamed on every screen,
           hand-pattied Angus burgers, wings tossed in 15 championship sauces, Kentucky
