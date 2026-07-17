@@ -9,51 +9,24 @@ const stats = [
   { big: 'LIVE', small: 'Music every weekend' },
 ]
 
-// Kentucky silhouette as clip-path coordinates (traced from state border)
-const KY_CLIP =
-  'polygon(0% 98.1%, 5.8% 81.9%, 8.4% 72.5%, 14.3% 78.5%, 15.1% 75.1%, 19.9% 61.9%, 25.9% 47.2%, 36.5% 43.8%, 40.4% 41.5%, 48.3% 42.6%, 54.9% 15.8%, 62.8% 1.9%, 66.7% 2.3%, 70.7% 13.2%, 77.2% 18.9%, 86.5% 15.8%, 91.7% 27.5%, 91.7% 37%, 95.7% 55.5%, 100% 60.8%, 95% 70.9%, 90.1% 76.6%, 77.5% 96.2%, 56.2% 95.5%, 40.4% 94.3%, 22.6% 94.7%, 20% 100%, 14.2% 100%, 2% 100%)'
-
 export default function Hero() {
   return (
     <section id="top" className="relative flex min-h-screen flex-col overflow-hidden bg-black">
-      {/* Kentucky in barrel wood — the bar's signature wall piece, minus the lettering */}
-      <div className="absolute inset-0 flex items-center justify-center" aria-hidden>
-        <motion.div
+      {/* the bar's real barrel-stave Kentucky sign, lettering removed */}
+      <div className="absolute inset-0" aria-hidden>
+        <motion.img
+          src="images/ky-clean.jpg"
+          alt=""
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.6, ease: 'easeOut' }}
-          className="relative aspect-[2.26/1] w-[min(100vw,1600px)]"
-        >
-          {/* breathing amber backlight behind the state */}
-          <div className="animate-backlight absolute inset-0 blur-3xl">
-            <div
-              className="absolute -inset-4"
-              style={{
-                clipPath: KY_CLIP,
-                background:
-                  'radial-gradient(ellipse 70% 60% at 50% 45%, rgba(255,138,46,0.85) 0%, rgba(232,114,42,0.4) 55%, transparent 78%)',
-              }}
-            />
-          </div>
-          <div className="animate-backlight absolute inset-0 blur-xl" style={{ animationDelay: '-2.7s' }}>
-            <div
-              className="absolute -inset-1 scale-[1.02]"
-              style={{ clipPath: KY_CLIP, background: 'rgba(255,155,60,0.5)' }}
-            />
-          </div>
-
-          {/* barrel-stave wood fill — single full-width tile so no seam lines */}
-          <div
-            className="absolute inset-0"
-            style={{
-              clipPath: KY_CLIP,
-              backgroundImage: "url('images/ky-wood.jpg')",
-              backgroundSize: '100% auto',
-              filter: 'brightness(1.3) saturate(1.05)',
-            }}
-          />
-        </motion.div>
+          className="h-full w-full object-cover"
+          style={{ objectPosition: 'center 45%', filter: 'brightness(1.12)' }}
+        />
       </div>
+
+      {/* breathing amber accent over the sign's backlight */}
+      <div className="animate-ember-pulse pointer-events-none absolute inset-0 mix-blend-screen" />
 
       {/* rising embers */}
       <Embers count={45} />
