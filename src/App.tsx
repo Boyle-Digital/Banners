@@ -5,6 +5,7 @@ import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Ticker from './components/Ticker'
 import Lineup from './components/Lineup'
+import GameBoard from './components/GameBoard'
 import GameDay from './components/GameDay'
 import MenuSection from './components/MenuSection'
 import Wings from './components/Wings'
@@ -38,6 +39,7 @@ export default function App() {
         <Ticker />
         <Lineup />
         <GameDay />
+        <GameBoard />
         <MenuSection />
         <Wings />
         <Bourbon />
