@@ -6,7 +6,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 py-14 sm:px-6">
         <div className="grid gap-10 md:grid-cols-4">
           <div className="md:col-span-2">
-            <img src="/images/logo.png" alt="Banners — Est. 2015" className="h-12 w-auto" />
+            <img src="images/logo.png" alt="Banners — Est. 2015" className="h-12 w-auto" />
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-steel">
               Lexington's local, family-friendly sports bar. Every game streamed, scratch
               kitchen, Kentucky bourbon, and live music every weekend since 2015.

@@ -42,23 +42,14 @@ export default function Hero() {
             />
           </div>
 
-          {/* barrel-stave wood fill */}
+          {/* barrel-stave wood fill — single full-width tile so no seam lines */}
           <div
             className="absolute inset-0"
             style={{
               clipPath: KY_CLIP,
-              backgroundImage: "url('/images/ky-wood.jpg')",
-              backgroundSize: '36% auto',
-              filter: 'brightness(1.35) saturate(1.05)',
-            }}
-          />
-          {/* depth shading inside the shape */}
-          <div
-            className="absolute inset-0"
-            style={{
-              clipPath: KY_CLIP,
-              background:
-                'radial-gradient(ellipse 75% 70% at 50% 45%, transparent 40%, rgba(0,0,0,0.32) 78%, rgba(0,0,0,0.5) 100%)',
+              backgroundImage: "url('images/ky-wood.jpg')",
+              backgroundSize: '100% auto',
+              filter: 'brightness(1.3) saturate(1.05)',
             }}
           />
         </motion.div>

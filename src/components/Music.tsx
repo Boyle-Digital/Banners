@@ -13,7 +13,7 @@ export default function Music() {
             className="relative order-2 lg:order-1"
           >
             <img
-              src="/images/food-2.jpg"
+              src="images/food-2.jpg"
               alt="Live band performing at Banners"
               className="w-full rounded-2xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.55)]"
               loading="lazy"

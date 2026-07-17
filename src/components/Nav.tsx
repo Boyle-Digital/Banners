@@ -29,7 +29,7 @@ export default function Nav() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
         <a href="#top" className="flex items-center gap-3">
-          <img src="/images/logo.png" alt="Banners — Est. 2015" className="h-9 w-auto drop-shadow-[0_0_12px_rgba(63,107,255,0.45)]" />
+          <img src="images/logo.png" alt="Banners — Est. 2015" className="h-9 w-auto drop-shadow-[0_0_12px_rgba(63,107,255,0.45)]" />
         </a>
 
         <nav className="hidden items-center gap-6 lg:flex">

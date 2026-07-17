@@ -52,7 +52,7 @@ export default function Wings() {
             </div>
 
             <img
-              src="/images/food-1.jpg"
+              src="images/food-1.jpg"
               alt="Banners buffalo wings in a basket with ranch"
               className="mt-10 hidden w-full max-w-md rounded-2xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.5)] lg:block"
               loading="lazy"
