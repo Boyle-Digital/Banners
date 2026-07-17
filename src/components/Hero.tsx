@@ -51,9 +51,13 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.1 }}
-          className="display text-chrome-grad text-[16vw] leading-[0.95] sm:text-8xl lg:text-[9rem]"
+          className="w-full"
         >
-          Banners
+          <img
+            src="images/logo.png"
+            alt="Banners — Est. 2015"
+            className="mx-auto w-[min(86vw,760px)] drop-shadow-[0_0_36px_rgba(63,107,255,0.35)]"
+          />
         </motion.h1>
 
         <motion.h2
