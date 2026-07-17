@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import Lenis from 'lenis'
+import LiveTicker from './components/LiveTicker'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Ticker from './components/Ticker'
@@ -30,6 +31,7 @@ export default function App() {
 
   return (
     <>
+      <LiveTicker />
       <Nav />
       <main>
         <Hero />

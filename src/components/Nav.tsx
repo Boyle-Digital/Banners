@@ -23,7 +23,7 @@ export default function Nav() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${
+      className={`fixed inset-x-0 top-9 z-50 transition-all duration-300 ${
         scrolled ? 'bg-ink/85 backdrop-blur-md border-b border-royal/25 shadow-[0_8px_30px_rgba(4,6,13,0.6)]' : 'bg-transparent'
       }`}
     >

@@ -21,7 +21,7 @@ export default function Hero() {
       </Suspense>
       <div className="hero-vignette pointer-events-none absolute inset-0" />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center px-4 pt-28 pb-16 text-center sm:px-6">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 flex-col items-center justify-center px-4 pt-36 pb-16 text-center sm:px-6">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
